@@ -524,8 +524,3 @@ variable "policy_statements" {
   type        = any
   default     = {}
 }
-
-variable "environment" {
-  type    = string
-  default = "Dev"
-}
