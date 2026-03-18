@@ -30,7 +30,7 @@ module "eventbridge" {
   attach_sqs_policy              = var.attach_sqs_policy
   attach_tracing_policy          = var.attach_tracing_policy
   bus_description                = var.bus_description
-  bus_name                       = local.bus_name
+  bus_name                       = var.bus_name
   cloudwatch_target_arns         = var.cloudwatch_target_arns
   connections                    = var.connections
   create_api_destinations        = var.create_api_destinations
@@ -72,10 +72,10 @@ module "eventbridge" {
   region                         = var.region
   role_description               = var.role_description
   role_force_detach_policies     = var.role_force_detach_policies
-  role_name                      = local.role_name
+  role_name                      = var.role_name
   role_path                      = var.role_path
   role_permissions_boundary      = var.role_permissions_boundary
-  role_tags                      = local.role_tags
+  role_tags                      = var.role_tags
   rules                          = var.rules
   schedule_group_timeouts        = var.schedule_group_timeouts
   schedule_groups                = var.schedule_groups
@@ -85,7 +85,7 @@ module "eventbridge" {
   sns_kms_arns                   = var.sns_kms_arns
   sns_target_arns                = var.sns_target_arns
   sqs_target_arns                = var.sqs_target_arns
-  tags                           = local.tags
+  tags                           = var.tags
   targets                        = var.targets
   trusted_entities               = var.trusted_entities
 }
